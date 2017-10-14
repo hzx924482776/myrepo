@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>third</title>
+	<style type="text/css">
+    #showTime{
+    	font-family: 'Microsoft YaHei';
+    	font-weight: normal;
+    	font-size: 100px;
+		display:inline-block;
+		width:1200px;
+		margin:0 auto;
+		text-align:center;
+		line-height:400px;
+    }
+    </style>
+</head>
+<body>
+   <div align="center" id="showTime"></div>
+<script> 
+setInterval(function(){
+	var date = new Date();
+	var h = date.getHours();
+	var i = date.getMinutes();
+	var s = date.getSeconds();
+	document.getElementById("showTime").innerHTML = h + '&nbsp;:&nbsp;' + (i<10?'0' + i:i) + '&nbsp;:&nbsp;' + (s<10?'0' + s:s);
+},500);
+</script>
+</body>
+</html>
